@@ -53,7 +53,7 @@ export default function Cart({ cart, updateCartItem, removeFromCart, getCartTota
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 py-12">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-12">
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-2">
@@ -72,16 +72,16 @@ export default function Cart({ cart, updateCartItem, removeFromCart, getCartTota
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Cart Items */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-3 sm:space-y-4">
             {cart.map((item) => (
               <div
                 key={item.id}
-                className="bg-white p-6 rounded-2xl border border-pink-100 hover:border-pink-300 hover:shadow-lg transition-all duration-300"
+                className="bg-white p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-pink-100 hover:border-pink-300 hover:shadow-lg transition-all duration-300"
               >
-                <div className="flex gap-6">
-                  <div className="relative w-32 h-32 rounded-xl overflow-hidden flex-shrink-0 border border-pink-100 shadow-sm">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                  <div className="relative w-full sm:w-24 md:w-32 h-48 sm:h-24 md:h-32 rounded-xl overflow-hidden flex-shrink-0 border border-pink-100 shadow-sm">
                     {item.image ? (
                       <Image
                         src={item.image}
@@ -106,22 +106,22 @@ export default function Cart({ cart, updateCartItem, removeFromCart, getCartTota
                       <div className="flex items-center gap-3">
                         <button
                           onClick={() => updateCartItem(item.id, item.quantity - 1)}
-                          className="w-10 h-10 rounded-full bg-pink-50 hover:bg-pink-100 flex items-center justify-center transition-colors border border-pink-200"
+                          className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-pink-50 hover:bg-pink-100 flex items-center justify-center transition-colors border border-pink-200"
                         >
                           <Minus className="w-4 h-4 text-pink-600" />
                         </button>
-                        <span className="text-lg font-semibold text-gray-900 w-12 text-center">
+                        <span className="text-base sm:text-lg font-semibold text-gray-900 w-10 sm:w-12 text-center">
                           {item.quantity}
                         </span>
                         <button
                           onClick={() => updateCartItem(item.id, item.quantity + 1)}
-                          className="w-10 h-10 rounded-full bg-pink-50 hover:bg-pink-100 flex items-center justify-center transition-colors border border-pink-200"
+                          className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-pink-50 hover:bg-pink-100 flex items-center justify-center transition-colors border border-pink-200"
                         >
                           <Plus className="w-4 h-4 text-pink-600" />
                         </button>
                       </div>
-                      <div className="flex items-center gap-4">
-                        <span className="text-xl font-bold text-pink-600">
+                      <div className="flex items-center justify-between sm:justify-end gap-4">
+                        <span className="text-lg sm:text-xl font-bold text-pink-600">
                           {formatCurrency(item.price * item.quantity)}
                         </span>
                         <button
@@ -141,7 +141,7 @@ export default function Cart({ cart, updateCartItem, removeFromCart, getCartTota
 
           {/* Summary */}
           <div className="lg:sticky lg:top-24 h-fit">
-            <div className="bg-white p-8 rounded-2xl border border-pink-100 shadow-sm">
+            <div className="bg-white p-6 sm:p-8 rounded-xl sm:rounded-2xl border border-pink-100 shadow-sm">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Resumen del Pedido</h3>
               <div className="space-y-4 mb-6 pb-6 border-b border-pink-100">
                 <div className="flex justify-between text-gray-600">

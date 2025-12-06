@@ -81,18 +81,18 @@ export default function HeroBanner({ addToCart }: HeroBannerProps) {
 
             {/* Trust Indicators */}
             <div className="mt-12 pt-8 border-t border-gray-200">
-              <div className="flex items-center gap-8 text-sm text-gray-600">
+              <div className="flex flex-wrap items-center gap-4 sm:gap-8 text-sm text-gray-600">
                 <div>
-                  <div className="text-2xl font-bold text-gray-900">1,000+</div>
-                  <div>Clientes Satisfechos</div>
+                  <div className="text-xl sm:text-2xl font-bold text-gray-900">1,000+</div>
+                  <div className="text-xs sm:text-sm">Clientes Satisfechos</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-gray-900">4.9/5</div>
-                  <div>Calificación</div>
+                  <div className="text-xl sm:text-2xl font-bold text-gray-900">4.9/5</div>
+                  <div className="text-xs sm:text-sm">Calificación</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-gray-900">100%</div>
-                  <div>Natural</div>
+                  <div className="text-xl sm:text-2xl font-bold text-gray-900">100%</div>
+                  <div className="text-xs sm:text-sm">Natural</div>
                 </div>
               </div>
             </div>
@@ -113,14 +113,14 @@ export default function HeroBanner({ addToCart }: HeroBannerProps) {
             </div>
             
             {/* Floating Badge */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-white" />
+            <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white rounded-xl sm:rounded-2xl shadow-xl p-4 sm:p-6 border border-gray-100">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-lg sm:rounded-xl flex items-center justify-center">
+                  <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
                 <div>
-                  <div className="font-bold text-gray-900">Garantizado</div>
-                  <div className="text-sm text-gray-600">Resultado 100%</div>
+                  <div className="text-sm sm:text-base font-bold text-gray-900">Garantizado</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Resultado 100%</div>
                 </div>
               </div>
             </div>

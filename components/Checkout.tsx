@@ -39,20 +39,20 @@ export default function Checkout({ cart, getCartTotal, setCurrentView, userData 
   }
 
   return (
-    <section className="pt-32 pb-24 bg-gradient-to-b from-cream-50 to-white min-h-screen">
+    <section className="pt-20 sm:pt-24 md:pt-32 pb-16 sm:pb-20 md:pb-24 bg-gradient-to-b from-cream-50 to-white min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-slate-500 mb-8">
+        <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 mb-6 sm:mb-8">
           <button
-            onClick={() => setCurrentView('landing')}
-            className="hover:text-emerald-600 transition-colors"
+            onClick={() => setCurrentView('home')}
+            className="hover:text-pink-600 transition-colors"
           >
             Inicio
           </button>
           <span>/</span>
           <button
             onClick={() => setCurrentView('cart')}
-            className="hover:text-emerald-600 transition-colors"
+            className="hover:text-pink-600 transition-colors"
           >
             Canasta
           </button>
@@ -60,7 +60,7 @@ export default function Checkout({ cart, getCartTotal, setCurrentView, userData 
           <span>Datos de Envío</span>
         </div>
 
-        <h2 className="text-4xl font-light text-slate-800 mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-slate-800 mb-8 sm:mb-12">
           Datos para la Entrega en Puerto Carreño
         </h2>
 
@@ -69,8 +69,8 @@ export default function Checkout({ cart, getCartTotal, setCurrentView, userData 
           <div className="lg:col-span-2">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="flex items-center gap-2 text-sm font-medium text-slate-700 mb-2">
-                  <User className="w-4 h-4 text-emerald-600" />
+                <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
+                  <User className="w-4 h-4 text-pink-600" />
                   Nombre Completo
                 </label>
                 <input
@@ -79,13 +79,13 @@ export default function Checkout({ cart, getCartTotal, setCurrentView, userData 
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="Ej: María González"
-                  className="w-full px-4 py-3 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all"
                 />
               </div>
 
               <div>
-                <label className="flex items-center gap-2 text-sm font-medium text-slate-700 mb-2">
-                  <Phone className="w-4 h-4 text-emerald-600" />
+                <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
+                  <Phone className="w-4 h-4 text-pink-600" />
                   Teléfono / WhatsApp
                 </label>
                 <input
@@ -94,13 +94,13 @@ export default function Checkout({ cart, getCartTotal, setCurrentView, userData 
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="Ej: 300 123 4567"
-                  className="w-full px-4 py-3 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all"
                 />
               </div>
 
               <div>
-                <label className="flex items-center gap-2 text-sm font-medium text-slate-700 mb-2">
-                  <MapPin className="w-4 h-4 text-emerald-600" />
+                <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
+                  <MapPin className="w-4 h-4 text-pink-600" />
                   Dirección Exacta en Puerto Carreño
                 </label>
                 <textarea
@@ -109,13 +109,13 @@ export default function Checkout({ cart, getCartTotal, setCurrentView, userData 
                   onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                   placeholder="Ej: Barrio El Centro, Calle 5 # 10-20, Casa blanca portón verde"
                   rows={3}
-                  className="w-full px-4 py-3 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all resize-none"
                 />
               </div>
 
               <div>
-                <label className="flex items-center gap-2 text-sm font-medium text-slate-700 mb-2">
-                  <MessageSquare className="w-4 h-4 text-emerald-600" />
+                <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
+                  <MessageSquare className="w-4 h-4 text-pink-600" />
                   Notas Adicionales (Opcional)
                 </label>
                 <textarea
@@ -123,22 +123,22 @@ export default function Checkout({ cart, getCartTotal, setCurrentView, userData 
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                   placeholder="Ej: Horario preferido de entrega, referencias del lugar, etc."
                   rows={2}
-                  className="w-full px-4 py-3 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all resize-none"
                 />
               </div>
 
-              <div className="flex gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <button
                   type="button"
                   onClick={() => setCurrentView('cart')}
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-full font-medium hover:bg-slate-50 transition-colors"
+                  className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white border border-slate-200 text-slate-700 rounded-full font-medium hover:bg-slate-50 transition-colors text-sm sm:text-base"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   <span>Volver a la Canasta</span>
                 </button>
                 <button
                   type="submit"
-                  className="flex-2 inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-600 to-emerald-500 text-white rounded-full font-medium shadow-medium hover:shadow-large transition-all duration-300 hover:scale-105"
+                  className="w-full sm:flex-2 inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
                 >
                   <Check className="w-5 h-5" />
                   <span>Confirmar Pedido</span>
@@ -148,30 +148,30 @@ export default function Checkout({ cart, getCartTotal, setCurrentView, userData 
           </div>
 
           {/* Summary */}
-          <div className="lg:sticky lg:top-32 h-fit">
-            <div className="bg-white p-8 rounded-2xl shadow-medium border border-slate-100">
-              <h3 className="text-xl font-light text-slate-800 mb-6">Resumen del Pedido</h3>
-              <div className="space-y-3 mb-6 pb-6 border-b border-slate-200">
+          <div className="lg:sticky lg:top-24 h-fit">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-pink-100">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6">Resumen del Pedido</h3>
+              <div className="space-y-3 mb-4 sm:mb-6 pb-4 sm:pb-6 border-b border-pink-100">
                 {cart.map((item) => (
-                  <div key={item.id} className="flex justify-between text-sm text-slate-600">
-                    <span>{item.quantity}x {item.name}</span>
-                    <span className="font-medium">{formatCurrency(item.price * item.quantity)}</span>
+                  <div key={item.id} className="flex justify-between text-xs sm:text-sm text-gray-600">
+                    <span className="flex-1 pr-2">{item.quantity}x {item.name}</span>
+                    <span className="font-semibold text-gray-900 whitespace-nowrap">{formatCurrency(item.price * item.quantity)}</span>
                   </div>
                 ))}
               </div>
               <div className="space-y-3 mb-6">
-                <div className="flex justify-between text-slate-600">
+                <div className="flex justify-between text-sm sm:text-base text-gray-600">
                   <span>Subtotal:</span>
-                  <span className="font-medium">{formatCurrency(subtotal)}</span>
+                  <span className="font-semibold text-gray-900">{formatCurrency(subtotal)}</span>
                 </div>
-                <div className="flex justify-between text-slate-600">
+                <div className="flex justify-between text-sm sm:text-base text-gray-600">
                   <span>Envío:</span>
-                  <span className="font-medium">{formatCurrency(SHIPPING_COST)}</span>
+                  <span className="font-semibold text-gray-900">{formatCurrency(SHIPPING_COST)}</span>
                 </div>
-                <div className="border-t border-slate-200 pt-4">
-                  <div className="flex justify-between text-xl font-semibold text-slate-800">
+                <div className="border-t border-pink-100 pt-4">
+                  <div className="flex justify-between text-lg sm:text-xl font-bold text-gray-900">
                     <span>Total a Pagar:</span>
-                    <span className="text-emerald-700">{formatCurrency(total)}</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-rose-600">{formatCurrency(total)}</span>
                   </div>
                 </div>
               </div>

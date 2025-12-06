@@ -41,7 +41,7 @@ export default function Login({ onClose, onLogin }: LoginProps) {
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 overflow-y-auto">
-      <div className="bg-white rounded-2xl max-w-md w-full p-8 lg:p-10 relative shadow-2xl my-8 max-h-[95vh] overflow-y-auto">
+      <div className="bg-white rounded-xl sm:rounded-2xl max-w-md w-full p-6 sm:p-8 lg:p-10 relative shadow-2xl my-4 sm:my-8 max-h-[95vh] overflow-y-auto">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-400 hover:text-pink-500 transition-colors p-2 hover:bg-pink-50 rounded-full"
@@ -50,15 +50,15 @@ export default function Login({ onClose, onLogin }: LoginProps) {
         </button>
 
         {/* Header with badge */}
-        <div className="mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-pink-50 border border-pink-200 rounded-full mb-4">
-            <Sparkles className="w-4 h-4 text-pink-600" />
-            <span className="text-sm font-semibold text-pink-700">French's Gold</span>
+        <div className="mb-6 sm:mb-8">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-pink-50 border border-pink-200 rounded-full mb-3 sm:mb-4">
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-pink-600" />
+            <span className="text-xs sm:text-sm font-semibold text-pink-700">French's Gold</span>
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
             {isLogin ? 'Bienvenido de vuelta' : 'Crea tu cuenta'}
           </h2>
-          <p className="text-gray-600">
+          <p className="text-sm sm:text-base text-gray-600">
             {isLogin 
               ? 'Ingresa tus datos para continuar' 
               : 'Únete y disfruta de beneficios exclusivos'}
@@ -66,7 +66,7 @@ export default function Login({ onClose, onLogin }: LoginProps) {
         </div>
 
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
           {!isLogin && (
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">

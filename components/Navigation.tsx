@@ -39,10 +39,10 @@ export default function Navigation({ cartCount, setCartOpen, onLoginClick, isLog
             {/* Logo */}
             <button onClick={() => handleNavClick('home')} className="flex items-center gap-2">
               <div className="flex flex-col">
-                <span className="text-2xl font-bold text-pink-600">
+                <span className="text-xl sm:text-2xl font-bold text-pink-600">
                   French's Gold
                 </span>
-                <span className="text-xs text-pink-400 -mt-1">
+                <span className="text-[10px] sm:text-xs text-pink-400 -mt-1">
                   Keratina Natural
                 </span>
               </div>
