@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar Styles */
+@layer utilities {
+  /* Webkit browsers (Chrome, Safari, Edge) */
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #fce7f3;
+    border-radius: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #f9a8d4;
+    border-radius: 10px;
+    border: 2px solid #fce7f3;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: #f472b6;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #f9a8d4 #fce7f3;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-cream-50 text-slate-800 font-sans antialiased;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-emerald-700 to-emerald-600 bg-clip-text text-transparent;
+  }
+  
+  .gradient-gold {
+    @apply bg-gradient-to-r from-gold-500 to-gold-400;
+  }
+  
+  .gradient-rose {
+    @apply bg-gradient-to-r from-rose-400 to-rose-300;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cream-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-emerald-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-emerald-400;
+}
+

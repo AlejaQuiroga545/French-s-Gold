@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keratinas French's Gold - Alisado Natural y Seguro | Puerto Carreño</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Navigation Bar (Fixed) -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>French's Gold</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" onclick="showPhase('landing'); scrollToSection('hero'); return false;">
+                    <i class="fas fa-home"></i> Inicio
+                </a>
+                <a href="#" onclick="showPhase('landing'); scrollToSection('promesa'); return false;">
+                    <i class="fas fa-shield-alt"></i> Nuestra Promesa
+                </a>
+                <a href="#" onclick="showPhase('product'); return false;">
+                    <i class="fas fa-shopping-bag"></i> Producto
+                </a>
+                <a href="#" onclick="showPhase('testimonios'); return false;">
+                    <i class="fas fa-star"></i> Testimonios
+                </a>
+                <a href="#" onclick="showPhase('landing'); scrollToSection('contacto'); return false;">
+                    <i class="fas fa-envelope"></i> Contacto
+                </a>
+            </div>
+            <div class="nav-cart" onclick="showPhase('cart')">
+                <i class="fas fa-shopping-basket"></i>
+                <span class="cart-badge" id="nav-cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FASE 1: LANDING PAGE -->
+    <section id="phase-landing" class="phase active">
+        <!-- Hero Section -->
+        <div id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content-wrapper">
+                    <div class="hero-text-content">
+                        <div class="hero-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>100% Natural y Vegano</span>
+                        </div>
+                        <h1 class="hero-title">
+                            <span class="title-main">Liso Profesional y Súper Seguro</span>
+                            <span class="title-highlight">¡Hasta para los Peques de 7 Años!</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            <strong>Keratinas French's Gold:</strong> El único alisado 100% natural, vegano y sin formol en Puerto Carreño. 
+                            <span class="highlight-rose">¡Tu cabello y el de tu familia merecen lo mejor!</span>
+                        </p>
+                        <div class="hero-features">
+                            <div class="hero-feature-item">
+                                <i class="fas fa-shield-check"></i>
+                                <span>0% Formol</span>
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fas fa-leaf"></i>
+                                <span>100% Natural</span>
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fas fa-heart"></i>
+                                <span>Seguro para Niños</span>
+                            </div>
+                        </div>
+                        <div class="hero-cta-group">
+                            <button class="cta-primary" onclick="showPhase('product')">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Ver Producto y Comprar</span>
+                            </button>
+                            <button class="cta-secondary" onclick="showPhase('landing'); scrollToSection('promesa');">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Conocer Más</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-image-content">
+                        <div class="hero-image-wrapper">
+                            <div class="image-decoration image-decoration-1"></div>
+                            <div class="image-decoration image-decoration-2"></div>
+                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1000&h=700&fit=crop" 
+                                 alt="Keratina natural French's Gold" 
+                                 class="hero-image">
+                            <div class="floating-badge floating-badge-1">
+                                <i class="fas fa-star"></i>
+                                <span>100% Garantizado</span>
+                            </div>
+                            <div class="floating-badge floating-badge-2">
+                                <i class="fas fa-truck"></i>
+                                <span>Envío Local</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us Section -->
+        <div class="why-section">
+            <div class="container">
+                <div class="section-content-wrapper">
+                    <div class="section-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=600&fit=crop" 
+                             alt="Cabello liso y brillante" 
+                             class="section-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="section-text-wrapper">
+                        <div class="section-label">
+                            <i class="fas fa-sparkles"></i>
+                            <span>Por Qué Elegirnos</span>
+                        </div>
+                        <h2 class="section-title-left">El Alisado que Tu Familia Necesita</h2>
+                        <p class="section-description">
+                            En <strong>French's Gold</strong> entendemos que la seguridad de tu familia es lo primero. 
+                            Por eso creamos una keratina que no solo alisa tu cabello, sino que lo nutre y protege.
+                        </p>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Alisado Profesional Garantizado</h4>
+                                    <p>Resultado 100% liso que dura meses, sin dañar tu cabello</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Nutrición y Brillo Intensos</h4>
+                                    <p>Aminoácidos y vitaminas que restauran la salud de tu cabello</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Seguridad Total</h4>
+                                    <p>Apto para madres lactantes y niños desde los 7 años</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="cta-primary" onclick="showPhase('product')">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Ver Producto</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nuestra Promesa Section -->
+        <div id="promesa" class="promise-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label-center">
+                        <i class="fas fa-heart"></i>
+                        <span>Nuestra Promesa</span>
+                    </div>
+                    <h2 class="section-title">
+                        ¿Sabías que es Segura para Ti y tu Bebé?
+                    </h2>
+                    <p class="section-intro">
+                        Cada ingrediente fue seleccionado pensando en la seguridad de tu familia. 
+                        <span class="highlight-rose">Porque sabemos que lo más importante es tu tranquilidad.</span>
+                    </p>
+                </div>
+                <div class="promise-grid">
+                    <div class="promise-card">
+                        <div class="promise-icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <h3>Apto para Mujeres Lactantes</h3>
+                        <p>100% seguro durante la lactancia. Sin químicos que puedan afectar a tu bebé. Puedes usarlo con total confianza.</p>
+                        <div class="promise-check">
+                            <i class="fas fa-check"></i>
+                            <span>Certificado Seguro</span>
+                        </div>
+                    </div>
+                    <div class="promise-card">
+                        <div class="promise-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3>Apto para Niños (7 a 9 años)</h3>
+                        <p>Tu peque puede tener el cabello liso y brillante sin ningún riesgo. ¡Totalmente seguro para toda la familia!</p>
+                        <div class="promise-check">
+                            <i class="fas fa-check"></i>
+                            <span>Recomendado para Niños</span>
+                        </div>
+                    </div>
+                    <div class="promise-card">
+                        <div class="promise-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>0% Formol / 100% Vegana</h3>
+                        <p>Sin formol, sin químicos agresivos. Solo ingredientes naturales y veganos que respetan tu cabello y el planeta.</p>
+                        <div class="promise-check">
+                            <i class="fas fa-check"></i>
+                            <span>Ingredientes Naturales</span>
+                        </div>
+                    </div>
+                    <div class="promise-card">
+                        <div class="promise-icon">
+                            <i class="fas fa-vitamins"></i>
+                        </div>
+                        <h3>Base de Aminoácidos y Vitaminas</h3>
+                        <p>Nutre tu cabello mientras lo alisa. Brillo y suavidad garantizados con cada aplicación.</p>
+                        <div class="promise-check">
+                            <i class="fas fa-check"></i>
+                            <span>Nutrición Profunda</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="promise-message">
+                    <div class="message-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>
+                        <span class="highlight-rose">Mamá,</span> sabemos lo importante que es cuidar de tu familia. 
+                        Por eso creamos French's Gold pensando en ti y en los tuyos. 
+                        <span class="highlight-green">Un alisado profesional que puedes usar con total tranquilidad.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works Section -->
+        <div class="how-it-works-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label-center">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span>Proceso Simple</span>
+                    </div>
+                    <h2 class="section-title">Tu French's Gold en 3 Pasos</h2>
+                    <p class="section-intro">Solo disponible en <strong>Puerto Carreño</strong> - Entregamos a tu puerta</p>
+                </div>
+                <div class="steps-wrapper">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>Elige tu Producto</h3>
+                        <p>Selecciona cuántas unidades necesitas. Cada una es $180.000 COP</p>
+                    </div>
+                    <div class="step-connector">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>Chatea con Nosotros</h3>
+                        <p>Envíanos un WhatsApp con tu pedido. Te respondemos al instante</p>
+                    </div>
+                    <div class="step-connector">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Recibe en tu Casa</h3>
+                        <p>Entregamos a domicilio en Puerto Carreño. Envío: $6.000 COP</p>
+                    </div>
+                </div>
+                <div class="steps-cta">
+                    <button class="cta-primary" onclick="showPhase('product')">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Empezar a Comprar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contacto" class="contact-section">
+            <div class="container">
+                <div class="section-content-wrapper reverse">
+                    <div class="section-text-wrapper">
+                        <div class="section-label">
+                            <i class="fas fa-envelope"></i>
+                            <span>Estamos Aquí</span>
+                        </div>
+                        <h2 class="section-title-left">¿Tienes Preguntas? Hablemos sin Compromiso</h2>
+                        <p class="section-description">
+                            Estamos aquí para ayudarte. <span class="highlight-rose">No dudes en escribirnos</span> 
+                            si tienes cualquier duda sobre el producto, el proceso o la entrega. 
+                            <span class="highlight-green">¡Tu tranquilidad es nuestra prioridad!</span>
+                        </p>
+                        <div class="contact-methods">
+                            <a href="https://wa.me/573001234567?text=Hola,%20quiero%20información%20sobre%20French's%20Gold" 
+                               target="_blank" class="contact-method-card">
+                                <div class="contact-icon whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h4>WhatsApp</h4>
+                                    <p>Escríbenos directo</p>
+                                </div>
+                                <i class="fas fa-arrow-right contact-arrow"></i>
+                            </a>
+                            <a href="https://facebook.com" 
+                               target="_blank" class="contact-method-card">
+                                <div class="contact-icon facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h4>Facebook</h4>
+                                    <p>Síguenos y comparte</p>
+                                </div>
+                                <i class="fas fa-arrow-right contact-arrow"></i>
+                            </a>
+                            <a href="https://instagram.com" 
+                               target="_blank" class="contact-method-card">
+                                <div class="contact-icon instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <h4>Instagram</h4>
+                                    <p>Mira nuestros resultados</p>
+                                </div>
+                                <i class="fas fa-arrow-right contact-arrow"></i>
+                            </a>
+                        </div>
+                        <div class="location-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Entregas solo en <strong>Puerto Carreño, Vichada</strong></span>
+                        </div>
+                    </div>
+                    <div class="section-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop" 
+                             alt="Contacto French's Gold" 
+                             class="section-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASE 2: DETALLE DEL PRODUCTO -->
+    <section id="phase-product" class="phase">
+        <div class="product-section">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="#" onclick="showPhase('landing'); return false;">Inicio</a>
+                    <span>/</span>
+                    <span>Producto</span>
+                </div>
+                <h2 class="section-title">El Único Producto que Necesitas</h2>
+                
+                <div class="product-detail">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=800&fit=crop" 
+                             alt="Keratina French's Gold 500ml" 
+                             class="product-image">
+                        <div class="product-badge">
+                            <i class="fas fa-star"></i>
+                            <span>100% Garantizado</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h1 class="product-name">Keratina French's Gold</h1>
+                        <p class="product-size">Presentación: 500ml</p>
+                        
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Alisado 100% Garantizado</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Nutrición Profunda</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Brillo Espectacular</span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-price-section">
+                            <p class="product-price">$180.000 <span class="currency">COP</span></p>
+                            <p class="price-note">Precio unitario</p>
+                        </div>
+                        
+                        <div class="product-quantity">
+                            <label>Cantidad:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="changeQuantity(-1)">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="number" id="product-quantity" value="1" min="1" readonly>
+                                <button class="qty-btn" onclick="changeQuantity(1)">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-add-cart" onclick="addToCart()">
+                            <i class="fas fa-shopping-basket"></i>
+                            <span>Añadir a la Canasta</span>
+                        </button>
+                        
+                        <div class="shipping-info">
+                            <i class="fas fa-truck"></i>
+                            <span>Entrega a domicilio en Puerto Carreño - $6.000 COP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASE 3: CARRITO DE COMPRAS -->
+    <section id="phase-cart" class="phase">
+        <div class="cart-section">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="#" onclick="showPhase('landing'); return false;">Inicio</a>
+                    <span>/</span>
+                    <span>Mi Canasta</span>
+                </div>
+                <h2 class="section-title">Mi Canasta</h2>
+                
+                <div class="cart-content">
+                    <div class="cart-items" id="cart-items-container">
+                        <!-- Items will be dynamically inserted here -->
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <div class="summary-card">
+                            <h3>Resumen del Pedido</h3>
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="cart-subtotal">$0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Envío (Puerto Carreño):</span>
+                                <span id="cart-shipping">$6.000</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span id="cart-total">$6.000</span>
+                            </div>
+                            <button class="btn-checkout" onclick="showPhase('checkout')">
+                                <i class="fas fa-arrow-right"></i>
+                                <span>Continuar con el Pedido</span>
+                            </button>
+                            <button class="btn-continue-shopping" onclick="showPhase('product')">
+                                <i class="fas fa-arrow-left"></i>
+                                <span>Seguir Comprando</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASE 4: CHECKOUT / DATOS DE ENVÍO -->
+    <section id="phase-checkout" class="phase">
+        <div class="checkout-section">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="#" onclick="showPhase('landing'); return false;">Inicio</a>
+                    <span>/</span>
+                    <a href="#" onclick="showPhase('cart'); return false;">Canasta</a>
+                    <span>/</span>
+                    <span>Datos de Envío</span>
+                </div>
+                <h2 class="section-title">Datos para la Entrega en Puerto Carreño</h2>
+                
+                <div class="checkout-content">
+                    <form id="checkout-form" class="checkout-form" onsubmit="handleCheckout(event)">
+                        <div class="form-group">
+                            <label for="customer-name">
+                                <i class="fas fa-user"></i>
+                                Nombre Completo
+                            </label>
+                            <input type="text" id="customer-name" name="name" required 
+                                   placeholder="Ej: María González">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-phone">
+                                <i class="fas fa-phone"></i>
+                                Teléfono / WhatsApp
+                            </label>
+                            <input type="tel" id="customer-phone" name="phone" required 
+                                   placeholder="Ej: 300 123 4567">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-address">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Dirección Exacta en Puerto Carreño
+                            </label>
+                            <textarea id="customer-address" name="address" rows="3" required 
+                                      placeholder="Ej: Barrio El Centro, Calle 5 # 10-20, Casa blanca portón verde"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-notes">
+                                <i class="fas fa-comment"></i>
+                                Notas Adicionales (Opcional)
+                            </label>
+                            <textarea id="customer-notes" name="notes" rows="2" 
+                                      placeholder="Ej: Horario preferido de entrega, referencias del lugar, etc."></textarea>
+                        </div>
+                        
+                        <div class="checkout-summary">
+                            <h3>Resumen del Pedido</h3>
+                            <div id="checkout-items-summary"></div>
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="checkout-subtotal">$0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Envío:</span>
+                                <span>$6.000</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row total">
+                                <span>Total a Pagar:</span>
+                                <span id="checkout-total">$6.000</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn-back" onclick="showPhase('cart')">
+                                <i class="fas fa-arrow-left"></i>
+                                Volver a la Canasta
+                            </button>
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-check"></i>
+                                Confirmar Pedido
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASE 5: CONFIRMACIÓN / PAGO POR WHATSAPP -->
+    <section id="phase-confirmation" class="phase">
+        <div class="confirmation-section">
+            <div class="container">
+                <div class="confirmation-content">
+                    <div class="confirmation-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h1 class="confirmation-title">¡Pedido Recibido con Éxito!</h1>
+                    <p class="confirmation-message">
+                        Gracias por confiar en <strong>French's Gold</strong>. Tu pedido ha sido registrado y estamos listos para prepararlo.
+                    </p>
+                    <div class="confirmation-details">
+                        <div class="detail-item">
+                            <i class="fas fa-shopping-bag"></i>
+                            <div>
+                                <strong>Número de Pedido:</strong>
+                                <span id="order-number">#FG-2024-001</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Tiempo de Entrega:</strong>
+                                <span>24-48 horas en Puerto Carreño</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="whatsapp-section">
+                        <h3>Próximo Paso: Confirmación y Pago</h3>
+                        <p>
+                            Para finalizar tu pedido, te contactaremos por WhatsApp para confirmar los detalles 
+                            y coordinar el método de pago. <span class="highlight-rose">¡Estamos a un mensaje de distancia!</span>
+                        </p>
+                        <button class="btn-whatsapp" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Finalizar Pedido y Chatear por WhatsApp</span>
+                        </button>
+                    </div>
+                    <div class="confirmation-actions">
+                        <button class="btn-home" onclick="resetAndGoHome()">
+                            <i class="fas fa-home"></i>
+                            Volver al Inicio
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASE 6: TESTIMONIOS -->
+    <section id="phase-testimonios" class="phase">
+        <div class="testimonials-section">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="#" onclick="showPhase('landing'); return false;">Inicio</a>
+                    <span>/</span>
+                    <span>Testimonios</span>
+                </div>
+                <h2 class="section-title">¡Lo Dicen Nuestras Clientas de Puerto Carreño!</h2>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Diana G.</h4>
+                                <p>Puerto Carreño</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "La keratina me duró 5 meses. ¡Mi hija de 8 años está feliz! Al principio tenía miedo porque es tan pequeña, 
+                            pero al ver que es 100% natural, me quedé tranquila. El resultado es increíble y lo mejor: sin olor fuerte ni químicos."
+                        </p>
+                        <div class="testimonial-images">
+                            <div class="image-placeholder">
+                                <i class="fas fa-image"></i>
+                                <span>Antes</span>
+                            </div>
+                            <div class="image-placeholder">
+                                <i class="fas fa-image"></i>
+                                <span>Después</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar avatar-rose">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>María L.</h4>
+                                <p>Puerto Carreño</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Estoy lactando y necesitaba algo seguro. French's Gold fue la solución perfecta. Mi cabello quedó súper liso y brillante, 
+                            y lo mejor es que no tuve que preocuparme por mi bebé. ¡Recomendada 100%!"
+                        </p>
+                        <div class="testimonial-images">
+                            <div class="image-placeholder">
+                                <i class="fas fa-image"></i>
+                                <span>Antes</span>
+                            </div>
+                            <div class="image-placeholder">
+                                <i class="fas fa-image"></i>
+                                <span>Después</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar avatar-amber">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Carmen R.</h4>
+                                <p>Puerto Carreño</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Llevo 3 meses con el alisado y sigue perfecto. Mi cabello se ve saludable, no seco como con otros productos. 
+                            Y el precio es justo para la calidad que tiene. ¡Vale cada peso!"
+                        </p>
+                        <div class="testimonial-images">
+                            <div class="image-placeholder">
+                                <i class="fas fa-image"></i>
+                                <span>Antes</span>
+                            </div>
+                            <div class="image-placeholder">
+                                <i class="fas fa-image"></i>
+                                <span>Después</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar avatar-yellow">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>Laura M.</h4>
+                                <p>Puerto Carreño</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Mi niña de 7 años quería tener el cabello liso como su mamá. Con French's Gold pude complacerla sin preocuparme. 
+                            El resultado es hermoso y ella está encantada. ¡Gracias por pensar en las familias!"
+                        </p>
+                        <div class="testimonial-images">
+                            <div class="image-placeholder">
+                                <i class="fas fa-image"></i>
+                                <span>Antes</span>
+                            </div>
+                            <div class="image-placeholder">
+                                <i class="fas fa-image"></i>
+                                <span>Después</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonials-cta">
+                    <p>¿Lista para tener el cabello de tus sueños?</p>
+                    <button class="cta-primary" onclick="showPhase('product')">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Ver Producto</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>French's Gold</span>
+                    </div>
+                    <p>Alisado 100% Natural, Vegano y Seguro para Toda la Familia</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <a href="https://wa.me/573001234567" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="https://facebook.com" target="_blank">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Keratinas French's Gold. Puerto Carreño, Vichada - Colombia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
